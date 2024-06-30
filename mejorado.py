@@ -1,7 +1,7 @@
 import os
-
+# Lista de libros registrados
 libros = []
-
+# Función para registrar un libro
 def registrarLibro():
     try:
         print("Registrar libros para la biblioteca")
@@ -22,7 +22,7 @@ def registrarLibro():
             print("Libro registrado con éxito")
     except ValueError:
         print("Error, Dato erróneo")
-
+# Función para prestar un libro
 def prestarLibro():
     try:
         print("Prestar libro")
@@ -41,7 +41,7 @@ def prestarLibro():
             print("Préstamo registrado con éxito")
     except ValueError:
         print("Error, Dato erróneo")
-
+# Función para listar todos los libros
 def listarLibros():
     print("Listar todos los libros")
     print("TÍTULO\t\tAUTOR\t\tAÑO DE PUBLICACIÓN\t\tSKU")
@@ -53,7 +53,7 @@ def listarLibros():
     for libro in libros:
         if "Usuario" in libro:
             print(libro["Usuario"] + "\t\t" + libro["Sku"] + "\t\t" + libro["Fecha de préstamo"])
-
+# Función para imprimir reporte de préstamos
 def imprimirReporte():
     try:
         print("Reporte de libros prestados")
@@ -65,13 +65,13 @@ def imprimirReporte():
             print("Planilla generada exitosamente en:", os.getcwd())
     except ValueError:
         print("Dato erróneo. Intente nuevamente")
-
+# Función para salir del programa
 def salirPrograma():
     print("Programa finalizado...")
     print("Desarrollado por")
     print("Maria Martinez")
     print("RUN: 19.003.574-3")
-
+# Menú principal
 def menu():
     while True:
         try:
